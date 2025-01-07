@@ -1,0 +1,318 @@
+#amount {
+    width: 290px; 
+}
+
+#other_type {
+    width: 252px;
+}
+
+/*Water Consumption Summary*/
+.main-content h1{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color:#B3CAD8;
+}
+
+.water_summary {
+	background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.water-summary table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.water-summary table th{
+	background-color: #B3CAD8;
+}
+
+.water-summary table th, 
+.water_summary table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Water Consumption Section */
+.water-info {
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
+
+.main-contentTwo{ 
+    word-spacing: 5px;   
+    margin-top: 10px;    
+    margin-bottom: 28px; 
+    color: #B3CAD8;    
+    text-align: center; 
+}
+
+/* Flexbox to arrange Current water consumption and Water Goals side by side */
+.water-status-container  {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between; 
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.consumption-status {
+    flex: 1; 
+    background-color: #f5f5f5;
+    padding-bottom:5px;
+    padding-top: 16px;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    margin: 0 10px; 
+    margin-bottom: 10px; 
+    font-weight: bold; 
+    font-size: 1.02em;
+    color: #333; 
+}
+
+.edit-goals {
+    display: flex;
+	background-color: #000;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+	font-size: 12px;
+    margin-right: 67px;
+    margin-bottom: 11px;
+    margin-top: -39px;
+    cursor: pointer;
+}
+
+.water-details {
+    background-color: #f9f9f9;
+    padding: 15px;
+    padding-top: 17px;
+    padding-bottom: -100px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+.water-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.water-details table th{
+	background-color: #B3CAD8;
+}
+
+.water-details table th, 
+.water-details table td {
+    border: 2px solid #ccc;
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 10px; 
+    font-weight: bold; 
+    font-size: 1.02em; 
+    color: #333; 
+}
+
+/*AddWaterCon*/
+.main-contents h1{
+    margin-top: 80px;
+    text-align: center;
+    color:#B3CAD8;
+}
+
+.main-contents
+.water-add-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 100px; 
+    padding: 50px; 
+    padding-bottom: 20px;
+    background-color: #f9f9f9; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+.input-group {
+    width: 100%; 
+    margin-bottom: 15px; 
+}
+
+#other_type_container {
+    padding: 10px;
+    margin-right: 545px;
+  }
+
+.input-group label {
+    margin-bottom: 10px; 
+    font-weight: bold; 
+    font-size: 1.1em; 
+    color: #333; 
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 15px ; 
+}
+
+.back-button {
+    display: flex;
+    align-items: flex-start; 
+    margin-right: 775px;
+    margin-bottom: 20px;
+}
+
+.action-buttons {
+    display: flex; 
+    gap: 10px; 
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/*UpSetWaterCon*/
+.main-contentss h1{
+    margin-top: 80px;
+    margin-left: 330px;
+    text-align: center;
+    color:#B3CAD8;
+}
+
+.main-contentss
+.water-add-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 430px;
+    margin-right: 100px; 
+    margin-bottom: 165px;
+    padding: 50px; 
+    padding-bottom: 20px;
+    background-color: #f9f9f9; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+.input-groupss {
+    width: 100%; 
+    margin-bottom: 15px;
+}
+
+.input-groupss label {
+    margin-bottom: 10px; 
+    font-weight: bold; 
+    font-size: 1.1em; 
+    color: #333; 
+}
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit-goal {
+	background-color: #000;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+	font-size: 12px;
+    cursor: pointer;
+}
+
+.edit-goal:hover {
+    color: #ccc; 
+}
+
+.set-goal {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.add-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.back-button {
+    display: flex;
+    justify-content: flex-start; 
+    margin-top: 15px; 
+}
+
+.bck-btn {
+    display: flex;
+    justify-content: flex-start; 
+	background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+	margin-right: 10px;
+    margin-bottom: 20px;
+	text-align: center;
+}
+
+.back-btn {
+    display: flex;
+    justify-content: flex-start; 
+	background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+	margin-right: 200px;
+    margin-bottom: 20px;
+	text-align: center;
+}
+
+.backs-btn {
+    display: flex;
+    justify-content: flex-start;
+	background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+	margin-left: 5px;
+    margin-bottom: 10px;
+	text-align: center;
+}
+
+.adds-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    text-align: center;
+}

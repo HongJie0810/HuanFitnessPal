@@ -1,0 +1,76 @@
+.main-content .membership-section {
+    background-color: #f4f4f9;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    background: linear-gradient(45deg, #f3e5f5, #e1f5fe);
+}
+
+.membership-section h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.membership-section .membership-benefits {
+    margin-bottom: 1em;
+}
+
+.membership-section .membership-benefits h3 {
+    color: #555;
+}
+
+.membership-section .membership-benefits ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+    color: #333;
+}
+
+.membership-section label {
+    color: #555;
+    font-weight: bold;
+    margin-top: 1em;
+    display: block;
+}
+
+.membership-section input,
+.membership-section select {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.membership-section .membership-button {
+    width: 100%;
+    padding: 0.7em;
+    margin-top: 1.5em;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.membership-section .membership-button:hover {
+    background-color: #4cae4c;
+}
+
+.membership-section .membership-info {
+    margin-top: 1em;
+    padding: 0.7em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+    display: none;
+}
+
+.membership-section .membership-info p {
+    margin: 0.5em 0;
+}

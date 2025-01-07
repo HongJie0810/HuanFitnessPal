@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="css/img/dumbbell.png" type="image/icon type">
+    <title>Upload Profile Photo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(-229deg, #cf91ff, #5782f5);
+            background-size: cover;
+            position: relative;
+        }
+
+        .logo-title-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .heart-logo {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .container>h1 {
+            font-size: 250%;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            background-color: #f0f0f0;
+            margin: 20px auto;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .upload-btn-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .upload-btn-wrapper button {
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        .upload-btn-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+
+        .button {
+            margin-top: 20px;
+        }
+
+        .button input {
+            width: 50%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button input:hover {
+            background: linear-gradient(-229deg, #cf91ff, #5782f5);
+        }
+
+        .button input:active {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-title-container">
+        <img class="heart-logo" src="css/img/dumbbell.png" alt="heart-logo">
+        <p class="title">HuanFitness</p>
+    </div>
+
+    <div class="container">
+        <h1 style="margin-bottom: 20px;">Upload Profile Photo</h1>
+
+        <div class="profile-image" id="profileImagePreview" style="background-image: url('default-profile.png');"></div>
+
+
+        <form action="upload-photo.php" method="POST" enctype="multipart/form-data">
+            <div class="upload-btn-wrapper">
+                <button>Choose Profile Photo</button>
+                <input type="file" id="fileUpload" name="fileUpload" accept="image/*" onchange="previewImage(event)" required>
+            </div>
+
+            <div class="button">
+                <input type="submit" id="submit" name="submit" value="Upload File">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function previewImage(event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var output = document.getElementById('profileImagePreview');
+                output.style.backgroundImage = 'url(' + reader.result + ')';
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+</body>
+</html>

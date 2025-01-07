@@ -1,0 +1,160 @@
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font: bold;
+}
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    height: 100%; /* Adjust height to match the container */
+    overflow-y: auto;
+    background: linear-gradient(45deg, #f3e5f5, #e1f5fe); /* Main background gradient */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Arrange children in a column */
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column; /* Keep items in a column */
+    width: 100%; /* Set a smaller width */
+    height: auto; /* Let it grow based on content */
+    padding: 10px; /* Padding around the content */
+    margin: 0 auto; /* Center the container */
+    border-radius: 8px; /* Optional: keep rounded corners */
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px; /* Add some padding for visual separation */
+}
+
+.profile-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color); /* Main text color */
+}
+
+.profile-header button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #007bff; /* Button background */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.profile-header button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column; /* Keep details in a column */
+    gap: 20px; /* Space between each detail row */
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 20px; /* Margin above button container */
+}
+
+.button-container button {
+    padding: 10px 20px; /* Padding for buttons */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease; /* Transition effect for hover */
+}
+
+/* Update Profile button styles */
+.button-container button.update {
+    background-color: #007bff; /* Blue background */
+    color: white; /* Button text color */
+}
+
+.button-container button.update:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Cancel button styles */
+.button-container button.edit-cancel {
+    background-color: #dc3545; /* Red background */
+    color: white; /* Button text color */
+}
+
+.button-container button.edit-cancel:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+label {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center align items */
+}
+
+#togglePassword {
+    cursor: pointer;
+    color: #666; /* Change icon color */
+    font-size: 1.2rem; /* Adjust icon size */
+    margin-left: 10px; /* Space between label and icon */
+}
+
+.password-container {
+    margin-top: 5px; /* Add some space between label and input */
+}
+
+#password {
+    width: 100%; /* Ensure input takes full width */
+    padding: 10px; /* Add padding for comfort */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Styling for read-only fields */
+.readonly-field {
+    background-color: lightgray;
+    border: 0px solid black; /* Ensure border stays black in readonly mode */
+}
+
+/* Editable field */
+.editable {
+    background-color: white;
+    border: 1px solid darkgrey; /* Ensure border stays black in editable mode */
+}
+
+/* Style for the button container */
+.button-container {
+    margin-top: 20px;
+}
+
+.Profile-photo {
+    display: flex;              /* Use flexbox layout */
+    justify-content: center;    /* Center horizontally */
+    align-items: center;        /* Center vertically (if needed) */
+    margin-bottom: 20px;       /* Add some margin below the image */
+}

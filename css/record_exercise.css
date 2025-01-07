@@ -1,0 +1,138 @@
+/* styles.css */
+
+.container1 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the main content */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 100px); /* Adjust this value according to the height of the navbar */
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+h2, h3, h1 {
+    color: #333;
+}
+
+.exercise-form, .edit-exercise-form, .delete-exercise-form {
+    margin: 20px 0;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555; /* Softer label color */
+}
+
+input[type="text"], input[type="number"], select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* White background for input fields */
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #4A90E2; /* Blue focus border */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Subtle shadow on focus */
+}
+
+button {
+    background-color: #FF6F61; /* Soft coral color for buttons */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #D15A29; /* Darker coral on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.message.success {
+    background-color: #d4edda; /* Light green background for success messages */
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da; /* Light red background for error messages */
+    color: #721c24;
+}
+
+.exercises-list {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin-top: 20px;
+    background-color: #FFCCBC; /* Soft orange background */
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.exercise-item {
+    padding: 10px;
+    margin: 5px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #FFAB91; /* Soft peach color */
+    flex: 0 1 calc(33.33% - 10px); 
+    box-sizing: border-box; 
+    transition: transform 0.2s; /* Smooth transition for scaling */
+}
+
+.exercise-item:hover {
+    transform: scale(1.03); /* Slightly scale up on hover */
+}
+
+.edit-fields {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; 
+}
+
+.button-container {
+    margin-top: 20px; 
+    text-align: center; 
+}
+
+.return-button {
+    background-color: #FF6F61; /* Soft coral color for return button */
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-size: 1rem;
+    transition: background-color 0.3s; 
+}
+
+.return-button:hover {
+    background-color: #D15A29; /* Darker coral on hover */
+}
+
+.filter-btn {
+    margin-top: 10px;
+    background-color: #4A90E2; /* Blue color for filter button */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #357ABD; /* Darker blue on hover */
+}

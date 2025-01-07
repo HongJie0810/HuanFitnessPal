@@ -1,0 +1,129 @@
+/* main-content styling */
+.main-content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center the calendar horizontally */
+    align-items: center; /* Center the calendar vertically */
+    padding: 20px;
+    background-color: #f4f6f8; /* Light background color for contrast */
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Title styling */
+.calendar-title {
+    font-size: 30px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the text bold */
+    color: #333; /* Title color */
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space between title and calendar */
+}
+
+/* calendar-container styling */
+.calendar-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Padding around the calendar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add a subtle hover effect */
+.calendar-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* calendar-header styling */
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* calendar-current-date styling */
+.calendar-current-date {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    padding-left: 5px;
+}
+
+/* calendar-navigation span styling */
+.calendar-navigation span {
+    font-size: 26px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0 8px;
+}
+
+.calendar-navigation span:hover {
+    color: #007bff;
+}
+
+/* calendar-body styling */
+.calendar-body {
+    padding-top: 20px;
+}
+
+/* calendar-weekdays styling */
+.calendar-weekdays {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 600;
+    color: #666;
+}
+
+.calendar-weekdays li {
+    width: calc(100% / 7);
+    text-align: center;
+}
+
+/* calendar-dates styling */
+.calendar-dates {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 10px;
+    list-style: none;
+    gap: 10px; /* Adds spacing between dates */
+}
+
+.calendar-dates li {
+    width: calc(100% / 7 - 10px); /* Adjust for gap */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #333;
+    background-color: #fafafa;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.calendar-dates li:hover {
+    background-color: #e6f2ff;
+    color: #333;
+}
+
+.calendar-dates .active {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.date-selection p {
+    font-size: 20px; /* Label font size */
+    color: #333; /* Label color */
+    margin-bottom: 20px; /* Space below label */
+}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuanFitness-Register Account</title>
+    <link rel="icon" href="css/img/dumbbell.png" type="image/icon type">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(-229deg, #cf91ff, #5782f5);
+            background-size: cover;
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+            color: #757575;
+        }
+
+        .logo-title-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .heart-logo {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .container > h1 {
+            font-size: 250%;
+        }
+
+        .input-login-container input,
+        .input-login-container select {
+            width: 80%;
+            margin: 15px 0;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .input-login-container input:focus,
+        .input-login-container select:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        .gender-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        .gender-container>.switch {
+            position: relative;
+            display: inline-block;
+            width: 60%;
+            height: 34px;
+        }
+
+        .gender-container>.switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .gender-container>.switch .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #2196F3;
+            transition: 0.25s;
+            border-radius: 34px;
+        }
+
+        .gender-container>.switch .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.25s;
+            border-radius: 50%;
+        }
+
+        .gender-container>.switch input:checked + .slider {
+            background-color: #ff2cd8; 
+        }
+
+        .gender-container>.switch input:checked + .slider:before {
+            transform: translateX(840%);
+        }
+
+        .button {
+            margin-top: 20px;
+        }
+
+        .button input {
+            width: 50%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button input:hover {
+            background: linear-gradient(-229deg, #cf91ff, #5782f5);
+        }
+
+        .button input:active {
+            background-color: #777;
+        }
+
+        .links-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+
+        .links-container a {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-title-container">
+        <img class="heart-logo" src="css/img/dumbbell.png" alt="heart-logo">
+        <p class="title">HuanFitness</p>
+
+    </div>
+
+    <div class="container">
+        <h1 style="margin-bottom: 60px;">Register Account</h1>
+
+        <form action="register_user.php" method="POST" onsubmit="return validateForm()">
+        <div class="input-login-container">
+            <input type="text" name="username" id="username" placeholder="Username" required>
+            <input type="email" name="email_address" id="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@(gmail\.com|yahoo\.com|hotmail\.com|petalmail\.com)"
+            title="Enter a valid email address (e.g., user@example.com)">
+            <input type="text" name="date_of_birth" id="dob" placeholder="Date of Birth" required>
+
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            <script>
+                flatpickr("#dob", {
+                    dateFormat: "Y-m-d", 
+                    defaultDate: "2000-01-01",
+                    maxDate: "today",
+                    onChange: function(selectedDates, dateStr, instance) {
+                    }
+                });
+            </script>
+
+            <div class="gender-container">
+                <label style="margin-right: 10px;">Gender:</label>
+                <label class="switch">
+                    <input type="checkbox" id="gender-toggle" onclick="changeGender()">
+                    <span class="slider circle">
+                        <p style="margin: 3%;" id="gender-change">MALE</p>
+                    </span>
+                </label>
+                 <input type="hidden" name="gender" id="gender" value="MALE">
+            </div>
+            
+                 <input type="tel" name="phone_no" id="pNum" placeholder="e.g. +6012-345-6789" pattern="^\+601[0-9]-[0-9]{3}-[0-9]{4,5}$" maxlength="15" required>
+
+                 <input type="number" name="height" id="height" placeholder="Height (cm)" min="65" max="272" required>
+                </div>
+
+        <div class="button">
+            <input type="submit" name="button-register" value="Register">
+        </div>
+
+        <div class="links-container">
+            <a href="login.html">Already have an account?</a>
+            <a href="forgot-password.html">Forgot password?</a>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    function changeGender() {
+        const checkbox = document.getElementById('gender-toggle');
+        const genderText = document.getElementById('gender-change');
+        const genderInput = document.getElementById('gender');
+        const gender = checkbox.checked ? 'FEMALE' : 'MALE';
+        genderText.textContent = gender;
+        genderInput.value = gender;
+    }
+
+    function validateAge(dob) {
+    const today = new Date();
+    const birthDate = new Date(dob);
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    return age >= 18; // Change 18 to any minimum age requirement
+    } 
+
+    function validateForm() {
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const dob = document.getElementById('dob').value;
+        const phone = document.getElementById('pNum').value;
+        const height = document.getElementById('height').value;
+
+        if (username === '' || dob === '' || phone === '' || height === '') {
+                alert('Please fill out all required fields.');
+                return false;
+        }
+
+        const emailPattern = /^[a-z0-9._%+-]+@(gmail\.com|yahoo\.com|hotmail\.com|petalmail\.com)$/;
+
+        if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address (e.g., user@gmail.com).');
+                return false;
+        }
+
+
+        if (!validateAge(dob)) {
+         alert('You must be at least 18 years old to register.');
+        return false;
+        }
+
+
+
+        if (username && email && dob && phone && height) {
+            window.location.href = 'register_password.html';
+            return true;
+        } else {
+            alert('Please fill out all required fields.');
+            return false;
+        }
+
+    }
+
+</script>
+</html>

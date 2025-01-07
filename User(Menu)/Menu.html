@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <link rel="stylesheet" href="css/Menu.css">
+  <link rel="stylesheet" href="css/Container.css">
+</head>
+
+<body>
+	<div class="layout">
+		<div class="container add" id="container">
+			<!-- Menu code remains unchanged -->
+			<div class="brand">
+				<h3>Main_Menu</h3>
+				<a href="#" id="toggle"><i class="bi bi-list"></i></a>
+			</div>
+			<div class="user">
+				<img src="img/dumbbell.png" alt="">
+				<div class="name">
+					<h3>HuanFitness</h3>
+				</div>
+			</div>
+			<div class="navbar">
+				<ul>
+					<li><a href="#"><i class="bi bi-house"></i><span>DashBoard</span></a></li>
+					<li><a href="#"><i class="bi bi-person-circle"></i><span>User_Information</span></a></li>
+					<li><a href="#"><i class="bi bi-person-badge"></i><span>Nutritionist_Information</span></a></li>
+					<li><a href="#"><i class="bi bi-person-fill"></i><span>Fitness_Class_Member</span></a></li>
+					<li><a href="#"><i class="bi bi-folder"></i><span>Fitness_Class_Request</span></a></li>
+					<li><a href="#"><i class="bi bi-journal-medical"></i><span>Dietary_Consultation_Request</span></a></li>
+					<li><a href="#"><i class="bi bi-box-arrow-in-right"></i><span>Log Out</span></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="main-content">
+			<h1 style="text-align: center; font-size:43px; color:rgb(252, 255, 253); text-shadow: 10ch;">Welcome to Huan Fitness</h1>
+			<section>
+				<div class="conteudo__geral">
+					<div class="containers">
+						<div class="container-carrossel">
+							<div class="carrossel">
+								<div class="carrossel-item"></div>
+								<div class="carrossel-item"></div>
+								<div class="carrossel-item"></div>
+								<div class="carrossel-item"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<script src="./script.js"></script>
+			</section>
+		</div>
+	</div>
+
+	<script>
+		var toggle = document.getElementById("toggle");
+		var container = document.getElementById("container");
+
+		toggle.onclick = function() {
+			container.classList.toggle('active');
+		}
+	</script>
+</body>
+</html>

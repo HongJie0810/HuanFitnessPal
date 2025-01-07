@@ -1,0 +1,194 @@
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    height: 100%; /* Adjust height to match the container */
+    overflow-y: auto;
+    background: linear-gradient(45deg, #f3e5f5, #e1f5fe);
+}
+
+.container1 {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange children in a row */
+    align-items: flex-start; /* Align items at the start */
+}
+
+.weight-input {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack input fields vertically */
+    margin-right: 20px; /* Space between form and stats */
+}
+
+.stats {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack highest and lowest vertically */
+    align-items: center; /* Center align items */
+    margin-top: 30px; /* Space to lower the stats section */
+    margin-left: 200px; /* Increase this value to push stats further to the right */
+}
+
+.stats-row {
+    display: flex; /* Use flexbox for layout */
+    width: 100%; /* Full width for the row */
+    justify-content: space-between; /* Distribute boxes evenly */
+}
+
+.average {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align the average box */
+    width: 100%; /* Full width for the average box */
+    margin-top: 10px; /* Space between the average and the stats */
+}
+
+.box {
+    flex: 1; /* Make boxes equal in width */
+    background: linear-gradient(45deg, #5c6bc0, #7986cb); /* Gradient background */
+    color: #fff; /* White text for contrast */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center align text */
+    margin: 0 10px; /* Margin between boxes */
+    min-width: 220px; /* Minimum width for the boxes */
+    max-width: 320px; /* Maximum width for the boxes */
+    width: 100%;
+}
+
+.stats .box {
+    margin-right: 10px; /* Margin only between highest and lowest */
+}
+
+.stats .box:last-child {
+    margin-right: 0; /* Remove right margin from last box */
+}
+
+
+h1, h2 {
+    color: #333; /* Darker text for headers */
+}
+
+form {
+    margin-bottom: 30px; /* Space below the form */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px; /* Space below labels */
+    color: #555; /* Dark gray for labels */
+}
+
+input[type="number"],
+input[type="date"] {
+    width: 100%; /* Full width inputs */
+    padding: 10px;
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button {
+    background-color: #5c6bc0; /* Button color */
+    color: white; /* White text */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #3f51b5; /* Darker shade on hover */
+}
+
+table {
+    width: 100%; /* Full width table */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Space above table */
+}
+
+th, td {
+    padding: 10px; /* Space inside cells */
+    border: 1px solid #ddd; /* Light gray border */
+    text-align: left; /* Left align text */
+}
+
+th {
+    background-color: #f5f5f5; /* Light background for headers */
+}
+
+/* edit weight css */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* Center horizontally */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* pagination css */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pagination a.active {
+    background-color: darkblue;
+    color: white;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+}
+
+.bmi-status {
+    padding: 15px;
+    border-radius: 5px;
+    color: black; /* Text color for better visibility */
+    margin: 20px 0; /* Space around the box */
+    text-align: center; /* Center-align text */
+}

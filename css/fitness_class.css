@@ -1,0 +1,87 @@
+/* Center the main-content container */
+.main-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 20px;
+}
+
+/* Main content styling */
+.main-content {
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Title styling */
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Grid layout for class cards */
+.class-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns for the first row */
+    gap: 20px;
+    justify-items: center; /* Center items within their grid cells */
+}
+
+/* Each card styling */
+.class-card {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure cards take full width of grid cell */
+    max-width: 220px; /* Set a maximum width to maintain size consistency */
+}
+
+/* Hover and button styling */
+.class-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.class-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.join-button {
+    background: #fff;
+    color: #6a11cb;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.join-button:hover {
+    background: #6a11cb;
+    color: #fff;
+}
+
+/* Hover effect */
+.class-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Center last two items */
+.class-cards {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for the first row */
+}
+

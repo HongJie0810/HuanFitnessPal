@@ -1,0 +1,159 @@
+* {
+    font-family: "Verdana", sans-serif;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    letter-spacing: 0px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+.general__content {
+    display: flex;
+    perspective: 10px;
+    transform: perspective(900px) rotateX(20deg);
+    will-change: perspective;
+    perspective-origin: center center;
+    transition: all 1.3s ease-out;
+    justify-content: center;
+    transform-style: preserve-3d;
+    margin: 190px;
+}
+
+.general__content:hover {
+    perspective: 1000px;
+    transition: all 1.3s ease-in;
+    transform: perspective(10000px) rotateX(0deg);
+}
+
+.general__content:hover .title__element {
+    opacity: 1;
+}
+
+.general__content:hover>div {
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.general__content:hover .initial__title {
+    opacity: 0;
+}
+
+.element__2,
+.element__3,
+.element__4,
+.element__1,
+.element__5,
+.element__6,
+.element__7 {
+    width: 115px;
+    height: 190px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4);
+    opacity: 0;
+    transition: all .3s ease;
+    transition-delay: 1s;
+    position: relative;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #f3f5f724;
+    cursor: pointer;
+    background-blend-mode: color-burn;
+}
+
+.element__2:hover,
+.element__3:hover,
+.element__4:hover,
+.element__1:hover,
+.element__5:hover,
+.element__6:hover,
+.element__7:hover {
+    box-shadow: 0 0 30px 10px rgba(49, 192, 211, 0.6);
+    background-color: rgba(74, 139, 201, 0.5);
+}
+
+.title__element {
+    transform: translateY(30px);
+    font-size: 14px;
+    opacity: 0;
+    transition: all .3s ease;
+    bottom: 0;
+    position: absolute;
+    will-change: transform;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(100, 100, 255, .6);
+}
+
+.element__photos {
+    background-position-y: 15px;
+}
+
+.element__1 {
+    transform: translateX(-180px) translateZ(-95px) rotateY(-5deg);
+    background-image: url('img/Users.webp');
+    background-size: 150px;
+}
+
+.element__2 {
+    transform: translateX(-120px) translateZ(-75px) rotateY(-5deg);
+    background-image: url('img/Nutritionist.png');
+    background-size: 150px;
+}
+
+.element__4 {
+    transform: translateX(-60px) translateZ(-55px) rotateY(-5deg);
+    background-image: url('img/request.png');
+    background-size: 120px;
+}
+
+.element__3 {
+    opacity: 1;
+    background-image: url('img/huan_fitness_member.webp');
+    background-size: 120px;
+    background-position-y: 25px;
+}
+
+.element__5 {
+    transform: translateX(60px) translateZ(-50px) rotateY(5deg);
+    background-size: 170px;
+    background-image: url('img/fitness2.png');
+}
+
+.element__6 {
+    transform: translateX(120px) translateZ(-75px) rotateY(5deg);
+    background-size: 120px;
+    background-image: url('img/fitness_request.png');
+    
+}
+
+.element__7 {
+    transform: translateX(180px) translateZ(-95px) rotateY(5deg);
+    background-image: url('img/log_out.png');
+}
+
+.initial__title {
+    font-weight: 300;
+    font-size:25px;
+    color: #fff;
+    transition: all .6s ease;
+    width: 100%;
+    height: 100%;
+    background-color: #303050;
+    background-image: radial-gradient(circle at center top, #cce, #33a);
+    border-radius: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.initial__title span {
+    color: white;
+    text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan, 0px 0px 40px cyan, 0px 0px 80px cyan;
+
+}
