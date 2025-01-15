@@ -4,14 +4,6 @@ ini_set('display_errors', 1);
 
 session_start();
 
-
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "user_information";
-
-$conn = new mysqli($host, $user, $pass, $dbname);
-
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
